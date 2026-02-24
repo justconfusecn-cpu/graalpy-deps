@@ -32,6 +32,6 @@ RUN graalpy -m ensurepip
 
 # 你之前用了 MAKEFLAGS="-j1" 避免 OOM/并发问题，这里保留
 RUN graalpy -m pip install -U pip && \
-    graalpy -m pip install numpy==2.2.6 pandas pyarrow -v
+    graalpy -m pip install numpy==2.2.4 pandas==2.2.3 pyarrow==20.0.0 -v
 
 CMD ["graalpy", "--version"]
