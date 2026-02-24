@@ -7,7 +7,7 @@ ARG TARGETARCH
 RUN dnf install -y oraclelinux-developer-release-el9 && \
     dnf install -y \
       curl ca-certificates \
-      libffi-devel boost-devel snappy-devel brotli-devel openssl-devel \
+      libffi-devel boost-devel snappy-devel brotli-devel openssl-devel thrift-devel \
       llvm llvm-libs llvm-devel \
       lld lld-devel \
       clang clang-libs clang-devel \
