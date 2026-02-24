@@ -31,8 +31,7 @@ ENV PATH="${GRAALPY_HOME}/bin:${PATH}"
 RUN graalpy -m ensurepip
 
 # 你之前用了 MAKEFLAGS="-j1" 避免 OOM/并发问题，这里保留
-RUN export MAKEFLAGS="-j1" && \
-    graalpy -m pip install -U pip && \
+RUN graalpy -m pip install -U pip && \
     graalpy -m pip install numpy==2.2.6 pandas pyarrow -v
 
 CMD ["graalpy", "--version"]
